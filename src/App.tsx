@@ -8,18 +8,20 @@ import "./App.css";
 function App() {
   const [categories, setCategories] = useState<string[]>([]);
 
-  const handleAddCategory = (categorie: string) => {
-    setCategories([categorie, ...categories]);
+  const handleAddCategory = (category: string) => {
+    if (categories.includes(category)) return;
+
+    setCategories([category, ...categories]);
   };
 
   return (
     <>
       <h1>Gif Searcher</h1>
-      <AddCategoryForm onAddCategorie={handleAddCategory} />
+      <AddCategoryForm onAddCategory={handleAddCategory} />
       <div>
-        {categories.map((categorie) => (
+        {categories.map((category) => (
           <div>
-            <span key={uuid()}>{categorie}</span>
+            <span key={uuid()}>{category}</span>
           </div>
         ))}
       </div>
