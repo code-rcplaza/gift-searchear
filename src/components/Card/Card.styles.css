@@ -1,0 +1,20 @@
+.outer {
+  background-color: #fff;
+  padding: 15px 15px 20px 15px;
+  max-width: 230px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 13px 1px rgba(0, 0, 0, 0.75);
+}
+
+.photo {
+  width: 200px;
+  max-height: 150px;
+  overflow: hidden;
+  object-fit: scale-down;
+}
+
+.title {
+  margin-top: 10px;
+}
